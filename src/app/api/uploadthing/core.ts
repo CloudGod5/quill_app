@@ -24,7 +24,9 @@ export const ourFileRouter = {
           url: `https://uploadthing-prod.s3.us-west-2.amazonaws.com/${file.key}`,
           uploadStatus: "PROCESSING"
         }
-      });
+      })
+
+      
     }),
 } satisfies FileRouter;
  

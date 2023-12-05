@@ -9,8 +9,8 @@ import {
 } from 'lucide-react'
 import { Document, Page, pdfjs } from 'react-pdf'
 
-import 'react-pdf/dist/esm/Page/AnnotationLayer.css'
-import 'react-pdf/dist/esm/Page/TextLayer.css'
+import 'react-pdf/dist/Page/AnnotationLayer.css'
+import 'react-pdf/dist/Page/TextLayer.css'
 import { useToast } from './ui/use-toast'
 
 import { useResizeDetector } from 'react-resize-detector'
@@ -101,7 +101,7 @@ const PdfRenderer = ({ url }: PdfRendererProps) => {
             }}
             variant='ghost'
             aria-label='previous page'>
-            <ChevronDown className='h-4 w-4' />
+            <ChevronUp className='h-4 w-4' />
           </Button>
 
           <div className='flex items-center gap-1.5'>
@@ -136,7 +136,7 @@ const PdfRenderer = ({ url }: PdfRendererProps) => {
             }}
             variant='ghost'
             aria-label='next page'>
-            <ChevronUp className='h-4 w-4' />
+            <ChevronDown className='h-4 w-4' />
           </Button>
         </div>
 
@@ -197,7 +197,7 @@ const PdfRenderer = ({ url }: PdfRendererProps) => {
               onLoadError={() => {
                 toast({
                   title: 'Error loading PDF',
-                  description: 'Please try again later', 
+                  description: 'Please try again later',
                   variant: 'destructive',
                 })
               }}
@@ -240,4 +240,4 @@ const PdfRenderer = ({ url }: PdfRendererProps) => {
   )
 }
 
-export default PdfRenderer
+export default PdfRenderer 
