@@ -10,7 +10,7 @@ const Navbar = () => {
             <MaxWidthWrapper>
                 <div className="flex h-14 items-center justify-between border-b border-zinc-200">
                     <Link 
-                    href='/' 
+                    href='/dashboard' 
                     className='flex z-40 font-semibold'>
                         <span>quill.</span>
                     </Link>

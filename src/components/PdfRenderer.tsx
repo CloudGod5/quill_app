@@ -9,8 +9,8 @@ import {
 } from 'lucide-react'
 import { Document, Page, pdfjs } from 'react-pdf'
 
-import 'react-pdf/dist/Page/AnnotationLayer.css'
-import 'react-pdf/dist/Page/TextLayer.css'
+import 'react-pdf/dist/esm/Page/AnnotationLayer.css'
+import 'react-pdf/dist/esm/Page/TextLayer.css'
 import { useToast } from './ui/use-toast'
 
 import { useResizeDetector } from 'react-resize-detector'
@@ -197,7 +197,7 @@ const PdfRenderer = ({ url }: PdfRendererProps) => {
               onLoadError={() => {
                 toast({
                   title: 'Error loading PDF',
-                  description: 'Please try again later',
+                  description: 'Please try again later', 
                   variant: 'destructive',
                 })
               }}
