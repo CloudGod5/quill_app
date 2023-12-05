@@ -34,7 +34,7 @@ const Page = async ( {params}: PageProps ) => {
             { /* Left side - PDF Viewer */}
             <div className="flex-1 xl:flex">
                 <div className="px-4 py-6 sm:px-6 lg:pl-8 xl:flex-1 xl:pl6">
-                    <PdfRenderer />
+                    <PdfRenderer url={file.url} />
                 </div>
             </div>
 
