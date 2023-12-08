@@ -41,15 +41,11 @@ interface PdfRendererProps {
 
 const PdfRenderer = ({ url }: PdfRendererProps) => {
   const { toast } = useToast()
-
   const [numPages, setNumPages] = useState<number>()
   const [currPage, setCurrPage] = useState<number>(1)
   const [scale, setScale] = useState<number>(1)
   const [rotation, setRotation] = useState<number>(0)
-  const [renderedScale, setRenderedScale] = useState<
-    number | null
-  >(null)
-
+  const [renderedScale, setRenderedScale] = useState<number | null>(null)
   const isLoading = renderedScale !== scale
 
   const CustomPageValidator = z.object({
@@ -72,7 +68,7 @@ const PdfRenderer = ({ url }: PdfRendererProps) => {
   } = useForm<TCustomPageValidator>({
     defaultValues: {
       page: '1',
-    },
+    }, 
     resolver: zodResolver(CustomPageValidator),
   })
 
@@ -128,7 +124,7 @@ const PdfRenderer = ({ url }: PdfRendererProps) => {
               numPages === undefined ||
               currPage === numPages
             }
-            onClick={() => {
+            onClick={() => { 
               setCurrPage((prev) =>
                 prev + 1 > numPages! ? numPages! : prev + 1
               )

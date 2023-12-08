@@ -14,11 +14,10 @@ model User {
 
   File File[]
 
-  stripeCustomerId         String?   @unique @map(name: "stripe_customer_id")
-  stripeSubscriptionId     String?   @unique @map(name: "stripe_subscription_id")
-  stripePiceId             String?   @unique @map(name: "stripe_price_id")
-  stripeCurrentPeriodStart DateTime? @map(name: "stripe_current_period_start")
-  stripeCurrentPeriodEnd   DateTime? @map(name: "stripe_current_period_end")
+  stripeCustomerId       String?   @unique @map(name: "stripe_customer_id")
+  stripeSubscriptionId   String?   @unique @map(name: "stripe_subscription_id")
+  stripePriceId          String?   @map(name: "stripe_price_id")
+  stripeCurrentPeriodEnd DateTime? @map(name: "stripe_current_period_end")
 }
 
 enum UploadStatus {
